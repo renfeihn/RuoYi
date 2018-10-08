@@ -3,7 +3,7 @@ package com.ruoyi.framework.web.exception.user;
 /**
  * 用户锁定异常类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class UserBlockedException extends UserException
 {

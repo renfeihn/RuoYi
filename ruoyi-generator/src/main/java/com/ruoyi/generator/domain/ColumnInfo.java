@@ -3,7 +3,7 @@ package com.ruoyi.generator.domain;
 /**
  * ry数据库表列信息
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class ColumnInfo
 {

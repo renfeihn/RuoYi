@@ -3,7 +3,7 @@ package com.ruoyi.framework.web.exception.user;
 /**
  * 用户账号已被删除
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class UserDeleteException extends UserException
 {

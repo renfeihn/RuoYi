@@ -28,7 +28,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 用户信息
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/system/user")

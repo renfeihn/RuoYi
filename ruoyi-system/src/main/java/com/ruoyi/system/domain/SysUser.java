@@ -10,7 +10,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 用户对象 sys_user
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysUser extends BaseEntity
 {

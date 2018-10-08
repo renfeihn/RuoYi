@@ -24,7 +24,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 角色信息
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/system/role")

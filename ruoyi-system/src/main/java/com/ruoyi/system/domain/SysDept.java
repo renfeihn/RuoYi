@@ -7,7 +7,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 部门表 sys_dept
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysDept extends BaseEntity
 {

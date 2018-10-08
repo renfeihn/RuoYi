@@ -8,7 +8,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 字典数据表 sys_dict_data
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysDictData extends BaseEntity
 {

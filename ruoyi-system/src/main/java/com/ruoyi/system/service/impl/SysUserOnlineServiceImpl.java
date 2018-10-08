@@ -12,7 +12,7 @@ import com.ruoyi.system.mapper.SysUserOnlineMapper;
 /**
  * 在线用户 服务层处理
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Component
 public class SysUserOnlineServiceImpl

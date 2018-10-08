@@ -7,7 +7,7 @@ import com.ruoyi.system.domain.SysDept;
 /**
  * 部门管理 数据层
  * 
- * @author ruoyi
+ * @author renfei
  */
 public interface SysDeptMapper
 {

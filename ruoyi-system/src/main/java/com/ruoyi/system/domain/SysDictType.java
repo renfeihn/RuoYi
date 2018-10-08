@@ -8,7 +8,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 字典类型表 sys_dict_type
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysDictType extends BaseEntity
 {

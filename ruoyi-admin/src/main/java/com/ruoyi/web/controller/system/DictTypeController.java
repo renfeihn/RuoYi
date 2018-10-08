@@ -23,7 +23,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 数据字典信息
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/system/dict")

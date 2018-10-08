@@ -6,7 +6,7 @@ import com.ruoyi.common.constant.PermissionConstants;
 /**
  * permission 工具类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class PermissionUtils
 {

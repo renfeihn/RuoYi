@@ -8,7 +8,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 角色表 sys_role
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysRole extends BaseEntity
 {

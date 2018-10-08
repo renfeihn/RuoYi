@@ -8,7 +8,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 参数配置表 sys_config
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysConfig extends BaseEntity
 {

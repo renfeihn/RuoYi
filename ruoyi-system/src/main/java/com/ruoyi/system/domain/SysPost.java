@@ -8,7 +8,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 岗位表 sys_post
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysPost extends BaseEntity
 {

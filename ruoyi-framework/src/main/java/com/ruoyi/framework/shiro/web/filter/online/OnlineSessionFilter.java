@@ -19,7 +19,7 @@ import com.ruoyi.system.domain.SysUser;
 /**
  * 自定义访问控制
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class OnlineSessionFilter extends AccessControlFilter
 {

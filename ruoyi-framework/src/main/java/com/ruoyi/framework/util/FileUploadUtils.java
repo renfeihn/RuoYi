@@ -11,7 +11,7 @@ import com.ruoyi.common.utils.Md5Utils;
 /**
  * 文件上传工具类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class FileUploadUtils
 {

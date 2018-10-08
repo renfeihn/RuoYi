@@ -10,7 +10,7 @@ import com.ruoyi.system.domain.SysUser;
 /**
  * 菜单 业务层
  * 
- * @author ruoyi
+ * @author renfei
  */
 public interface ISysMenuService
 {

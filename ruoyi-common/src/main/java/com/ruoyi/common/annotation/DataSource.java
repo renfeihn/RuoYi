@@ -9,7 +9,7 @@ import com.ruoyi.common.enums.DataSourceType;
 /**
  * 自定义多数据源切换注解
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

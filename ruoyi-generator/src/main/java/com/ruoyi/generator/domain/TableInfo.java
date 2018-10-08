@@ -7,7 +7,7 @@ import com.ruoyi.common.utils.StringUtils;
 /**
  * ry 数据库表
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class TableInfo extends BaseEntity
 {

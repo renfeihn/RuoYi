@@ -3,7 +3,7 @@ package com.ruoyi.framework.web.exception.user;
 /**
  * 用户错误最大次数异常类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class UserPasswordRetryLimitExceedException extends UserException
 {

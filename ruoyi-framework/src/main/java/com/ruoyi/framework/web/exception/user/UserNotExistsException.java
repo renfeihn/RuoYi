@@ -3,7 +3,7 @@ package com.ruoyi.framework.web.exception.user;
 /**
  * 用户不存在异常类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class UserNotExistsException extends UserException
 {

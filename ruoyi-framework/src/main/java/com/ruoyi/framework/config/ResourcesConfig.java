@@ -10,7 +10,7 @@ import com.ruoyi.common.config.Global;
 /**
  * 通用配置
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Configuration
 public class ResourcesConfig implements WebMvcConfigurer

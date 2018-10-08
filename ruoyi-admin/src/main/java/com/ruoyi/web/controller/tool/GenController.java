@@ -23,7 +23,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 代码生成 操作处理
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/tool/gen")

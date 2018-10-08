@@ -23,7 +23,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 岗位信息操作处理
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/system/post")

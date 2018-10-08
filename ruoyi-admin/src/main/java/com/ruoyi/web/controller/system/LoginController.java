@@ -18,7 +18,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 登录验证
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 public class LoginController extends BaseController

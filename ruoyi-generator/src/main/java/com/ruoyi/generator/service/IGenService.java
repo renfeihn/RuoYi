@@ -6,7 +6,7 @@ import com.ruoyi.generator.domain.TableInfo;
 /**
  * 代码生成 服务层
  * 
- * @author ruoyi
+ * @author renfei
  */
 public interface IGenService
 {

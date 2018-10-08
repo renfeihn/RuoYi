@@ -27,7 +27,7 @@ import com.ruoyi.generator.util.VelocityInitializer;
 /**
  * 代码生成 服务层处理
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Service
 public class GenServiceImpl implements IGenService

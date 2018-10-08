@@ -26,7 +26,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 个人信息 业务处理
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/system/user/profile")

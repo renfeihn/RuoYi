@@ -17,7 +17,7 @@ import com.ruoyi.system.service.ISysDeptService;
 /**
  * 部门管理 服务实现
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Service
 public class SysDeptServiceImpl implements ISysDeptService
@@ -78,7 +78,7 @@ public class SysDeptServiceImpl implements ISysDeptService
     /**
      * 对象转部门树
      *
-     * @param menuList 部门列表
+     * @param deptList 部门列表
      * @param isCheck 是否需要选中
      * @param roleDeptList 角色已存在菜单列表
      * @return

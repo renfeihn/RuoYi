@@ -7,7 +7,7 @@ import com.ruoyi.common.base.BaseEntity;
 /**
  * 通知公告表 sys_notice
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class SysNotice extends BaseEntity
 {

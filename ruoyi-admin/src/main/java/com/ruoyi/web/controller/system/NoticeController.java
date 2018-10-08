@@ -22,7 +22,7 @@ import com.ruoyi.web.core.base.BaseController;
 /**
  * 公告 信息操作处理
  * 
- * @author ruoyi
+ * @author renfei
  */
 @Controller
 @RequestMapping("/system/notice")

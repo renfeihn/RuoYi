@@ -11,7 +11,7 @@ import com.ruoyi.common.utils.YamlUtil;
 /**
  * 全局配置类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class Global
 {

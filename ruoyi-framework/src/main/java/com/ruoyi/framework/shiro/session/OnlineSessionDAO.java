@@ -15,7 +15,7 @@ import com.ruoyi.system.service.impl.SysUserOnlineServiceImpl;
 /**
  * 针对自定义的ShiroSession的db操作
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class OnlineSessionDAO extends EnterpriseCacheSessionDAO
 {

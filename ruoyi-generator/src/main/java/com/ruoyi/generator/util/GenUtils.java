@@ -15,7 +15,7 @@ import com.ruoyi.generator.domain.TableInfo;
 /**
  * 代码生成器 工具类
  * 
- * @author ruoyi
+ * @author renfei
  */
 public class GenUtils
 {

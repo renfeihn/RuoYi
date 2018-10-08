@@ -3,7 +3,7 @@ package com.ruoyi.common.constant;
 /**
  * Shiro通用常量
  * 
- * @author ruoyi
+ * @author renfei
  */
 public interface ShiroConstants
 {
@@ -37,28 +37,5 @@ public interface ShiroConstants
      */
     public String ONLINE_SESSION = "online_session";
 
-    /**
-     * 验证码key
-     */
-    public static final String CURRENT_CAPTCHA = "captcha";
 
-    /**
-     * 验证码开关
-     */
-    public static final String CURRENT_ENABLED = "captchaEnabled";
-
-    /**
-     * 验证码开关
-     */
-    public static final String CURRENT_TYPE = "captchaType";
-
-    /**
-     * 验证码
-     */
-    public static final String CURRENT_VALIDATECODE = "validateCode";
-
-    /**
-     * 验证码错误
-     */
-    public static final String CAPTCHA_ERROR = "captchaError";
 }
