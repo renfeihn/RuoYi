@@ -84,7 +84,7 @@ public class RoleController extends BaseController
     {
         role.setCreateBy(ShiroUtils.getLoginName());
         ShiroUtils.clearCachedAuthorizationInfo();
-        return toAjax(roleService.insertRole(role));
+        return toAjax(0);
 
     }
 
@@ -110,7 +110,7 @@ public class RoleController extends BaseController
     {
         role.setUpdateBy(ShiroUtils.getLoginName());
         ShiroUtils.clearCachedAuthorizationInfo();
-        return toAjax(roleService.updateRole(role));
+        return toAjax(0);
     }
 
     /**
@@ -134,7 +134,7 @@ public class RoleController extends BaseController
     public AjaxResult ruleSave(SysRole role)
     {
         role.setUpdateBy(ShiroUtils.getLoginName());
-        return toAjax(roleService.updateRule(role));
+        return toAjax(0);
     }
 
     @RequiresPermissions("system:role:remove")

@@ -73,7 +73,7 @@ public interface ISysRoleService
      * @param role 角色信息
      * @return 结果
      */
-    public int insertRole(SysRole role);
+    public void insertRole(SysRole role);
 
     /**
      * 修改保存角色信息
@@ -81,7 +81,7 @@ public interface ISysRoleService
      * @param role 角色信息
      * @return 结果
      */
-    public int updateRole(SysRole role);
+    public void updateRole(SysRole role);
 
     /**
      * 修改数据权限信息
@@ -89,7 +89,7 @@ public interface ISysRoleService
      * @param role 角色信息
      * @return 结果
      */
-    public int updateRule(SysRole role);
+    public void updateRule(SysRole role);
 
     /**
      * 校验角色名称是否唯一
