@@ -1,21 +1,14 @@
 package com.ruoyi.framework.shiro.service;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import javax.annotation.PostConstruct;
-
+import com.ruoyi.framework.web.exception.user.UserPasswordNotMatchException;
+import com.ruoyi.system.domain.SysUser;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
-import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import com.ruoyi.common.constant.Constants;
-import com.ruoyi.framework.manager.AsyncManager;
-import com.ruoyi.framework.manager.factory.AsyncFactory;
-import com.ruoyi.framework.util.MessageUtils;
-import com.ruoyi.framework.web.exception.user.UserPasswordNotMatchException;
-import com.ruoyi.framework.web.exception.user.UserPasswordRetryLimitExceedException;
-import com.ruoyi.system.domain.SysUser;
+
+import javax.annotation.PostConstruct;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 登录密码方法
@@ -52,7 +45,6 @@ public class PasswordService {
 //        }
 
         if (!matches(user, password)) {
-            AsyncManager.me().execute(AsyncFactory.recordLogininfor(loginName, Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match")));
 //            loginRecordCache.put(loginName, retryCount);
             throw new UserPasswordNotMatchException();
         } else {
