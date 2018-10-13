@@ -6,7 +6,6 @@ import com.ruoyi.common.config.Global;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.framework.util.FileUploadUtils;
 import com.ruoyi.system.domain.SysUser;
-import com.ruoyi.system.service.ISysDictDataService;
 import com.ruoyi.system.service.ISysUserService;
 import com.ruoyi.web.core.base.BaseController;
 import org.apache.shiro.crypto.hash.Md5Hash;
@@ -33,16 +32,12 @@ public class ProfileController extends BaseController {
     @Autowired
     private ISysUserService userService;
 
-    @Autowired
-    private ISysDictDataService dictDataService;
-
     /**
      * 个人信息
      */
     @GetMapping()
     public String profile(ModelMap mmap) {
         SysUser user = getUser();
-        user.setSex(dictDataService.selectDictLabel("sys_user_sex", user.getSex()));
         mmap.put("user", user);
         return prefix + "/profile";
     }

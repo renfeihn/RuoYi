@@ -18,10 +18,7 @@
 								字典类型：<input type="text" name="dictType"/>
 							</li>
 							<li>
-								字典状态：<select name="status" th:with="type=${@dict.getType('sys_normal_disable')}">
-									<option value="">所有</option>
-									<option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
-								</select>
+								字典状态：
 							</li>
 							<li class="select-time">
 								<label>创建时间： </label>
@@ -63,7 +60,7 @@
 		var editFlag = [[${@permission.hasPermi('system:dict:edit')}]];
 		var listFlag = [[${@permission.hasPermi('system:dict:list')}]];
 		var removeFlag = [[${@permission.hasPermi('system:dict:remove')}]];
-		var datas = [[${@dict.getType('sys_normal_disable')}]];
+		var datas = [{"dictLabel":"正常","dictValue":"0"},{"dictLabel":"停用","dictValue":"1"}];
 		var prefix = ctx + "system/dict";
 
 		$(function() {
