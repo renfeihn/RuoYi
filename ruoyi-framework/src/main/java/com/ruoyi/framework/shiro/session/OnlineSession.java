@@ -18,9 +18,6 @@ public class OnlineSession extends SimpleSession
     /** 用户名称 */
     private String loginName;
 
-    /** 部门名称 */
-    private String deptName;
-
     /** 登录IP地址 */
     private String host;
 
@@ -86,16 +83,6 @@ public class OnlineSession extends SimpleSession
     public void setLoginName(String loginName)
     {
         this.loginName = loginName;
-    }
-
-    public String getDeptName()
-    {
-        return deptName;
-    }
-
-    public void setDeptName(String deptName)
-    {
-        this.deptName = deptName;
     }
 
     public OnlineStatus getStatus()

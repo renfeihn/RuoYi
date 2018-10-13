@@ -2,6 +2,10 @@ package com.ruoyi.system.service;
 
 import java.util.List;
 
+import com.ruoyi.common.annotation.DataScope;
+import com.ruoyi.common.constant.UserConstants;
+import com.ruoyi.common.support.Convert;
+import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.system.domain.SysUser;
 
 /**
@@ -29,10 +33,10 @@ public interface ISysUserService {
     /**
      * 通过手机号码查询用户
      *
-     * @param phoneNumber 手机号码
+     * @param phoneNumber 用户名
      * @return 用户对象信息
      */
-    public SysUser selectUserByPhoneNumber(String phoneNumber);
+    public SysUser selectUserByPhoneNumber(String phoneNumber) ;
 
     /**
      * 通过邮箱查询用户
@@ -56,35 +60,34 @@ public interface ISysUserService {
      * @param userId 用户ID
      * @return 结果
      */
-    public int deleteUserById(Long userId);
+    public int deleteUserById(Long userId) ;
 
     /**
      * 批量删除用户信息
      *
      * @param ids 需要删除的数据ID
      * @return 结果
-     * @throws Exception 异常
      */
-    public int deleteUserByIds(String ids) throws Exception;
+    public int deleteUserByIds(String ids) throws Exception ;
 
     /**
-     * 保存用户信息
+     * 新增保存用户信息
      *
      * @param user 用户信息
      * @return 结果
      */
-    public int insertUser(SysUser user);
+    public int insertUser(SysUser user) ;
 
     /**
-     * 保存用户信息
+     * 修改保存用户信息
      *
      * @param user 用户信息
      * @return 结果
      */
-    public int updateUser(SysUser user);
+    public int updateUser(SysUser user) ;
 
     /**
-     * 修改用户详细信息
+     * 修改用户个人详细信息
      *
      * @param user 用户信息
      * @return 结果
@@ -92,50 +95,35 @@ public interface ISysUserService {
     public int updateUserInfo(SysUser user);
 
     /**
-     * 修改用户密码信息
+     * 修改用户密码
      *
      * @param user 用户信息
      * @return 结果
      */
     public int resetUserPwd(SysUser user);
 
+
     /**
      * 校验用户名称是否唯一
      *
-     * @param loginName 登录名称
-     * @return 结果
+     * @param loginName 用户名
+     * @return
      */
     public String checkLoginNameUnique(String loginName);
 
     /**
-     * 校验手机号码是否唯一
+     * 校验用户名称是否唯一
      *
-     * @param user 用户信息
-     * @return 结果
+     * @param user 用户名
+     * @return
      */
-    public String checkPhoneUnique(SysUser user);
+    public String checkPhoneUnique(SysUser user) ;
 
     /**
      * 校验email是否唯一
      *
-     * @param user 用户信息
-     * @return 结果
+     * @param user 用户名
+     * @return
      */
-    public String checkEmailUnique(SysUser user);
-
-    /**
-     * 根据用户ID查询用户所属角色组
-     *
-     * @param userId 用户ID
-     * @return 结果
-     */
-    public String selectUserRoleGroup(Long userId);
-
-    /**
-     * 根据用户ID查询用户所属岗位组
-     *
-     * @param userId 用户ID
-     * @return 结果
-     */
-    public String selectUserPostGroup(Long userId);
+    public String checkEmailUnique(SysUser user) ;
 }

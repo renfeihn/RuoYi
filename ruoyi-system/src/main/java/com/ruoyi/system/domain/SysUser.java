@@ -70,16 +70,6 @@ public class SysUser extends BaseEntity
     @Excel(name = "最后登陆时间")
     private Date loginDate;
 
-    /** 部门对象 */
-    private SysDept dept;
-
-    private List<SysRole> roles;
-
-    /** 角色组 */
-    private Long[] roleIds;
-
-    /** 岗位组 */
-    private Long[] postIds;
 
     public Long getUserId()
     {
@@ -241,45 +231,6 @@ public class SysUser extends BaseEntity
         this.loginDate = loginDate;
     }
 
-    public SysDept getDept()
-    {
-        return dept;
-    }
-
-    public void setDept(SysDept dept)
-    {
-        this.dept = dept;
-    }
-
-    public List<SysRole> getRoles()
-    {
-        return roles;
-    }
-
-    public void setRoles(List<SysRole> roles)
-    {
-        this.roles = roles;
-    }
-
-    public Long[] getRoleIds()
-    {
-        return roleIds;
-    }
-
-    public void setRoleIds(Long[] roleIds)
-    {
-        this.roleIds = roleIds;
-    }
-
-    public Long[] getPostIds()
-    {
-        return postIds;
-    }
-
-    public void setPostIds(Long[] postIds)
-    {
-        this.postIds = postIds;
-    }
 
     @Override
     public String toString() {
