@@ -4,7 +4,6 @@ import com.ruoyi.framework.shiro.service.LoginService;
 import com.ruoyi.framework.util.ShiroUtils;
 import com.ruoyi.framework.web.exception.user.*;
 import com.ruoyi.system.domain.SysUser;
-import com.ruoyi.system.service.ISysMenuService;
 import com.ruoyi.system.service.ISysRoleService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -27,8 +26,8 @@ import java.util.Set;
 public class UserRealm extends AuthorizingRealm {
     private static final Logger log = LoggerFactory.getLogger(UserRealm.class);
 
-    @Autowired
-    private ISysMenuService menuService;
+//    @Autowired
+//    private ISysMenuService menuService;
 
     @Autowired
     private ISysRoleService roleService;
@@ -53,11 +52,11 @@ public class UserRealm extends AuthorizingRealm {
             info.addStringPermission("*:*:*");
         } else {
             roles = roleService.selectRoleKeys(user.getUserId());
-            menus = menuService.selectPermsByUserId(user.getUserId());
+//            menus = menuService.selectPermsByUserId(user.getUserId());
             // 角色加入AuthorizationInfo认证对象
             info.setRoles(roles);
             // 权限加入AuthorizationInfo认证对象
-            info.setStringPermissions(menus);
+//            info.setStringPermissions(menus);
         }
         return info;
     }

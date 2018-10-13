@@ -50,28 +50,10 @@
                     <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">主页</span> <span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li class="active"><a class="menuItem" th:href="@{/system/main}">了解若依</a></li>
+                        <li class="active"><a class="menuItem" th:href="@{/system/main}">首页</a></li>
                     </ul>
                 </li>
-                <li th:each="menu : ${menus}">
-                    <a href="#">
-                        <i class="fa fa fa-bar-chart-o" th:class="${menu.icon}"></i>
-                        <span class="nav-label" th:text="${menu.menuName}">一级菜单</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level collapse">
-                        <li th:each="cmenu : ${menu.children}">
-                            <a th:if="${#lists.isEmpty(cmenu.children)}" class="menuItem" th:utext="${cmenu.menuName}"
-                               th:href="@{${cmenu.url}}">二级菜单</a>
-                            <a th:if="${not #lists.isEmpty(cmenu.children)}" href="#">[[${cmenu.menuName}]]<span
-                                    class="fa arrow"></span></a>
-                            <ul th:if="${not #lists.isEmpty(cmenu.children)}" class="nav nav-third-level">
-                                <li th:each="emenu : ${cmenu.children}"><a class="menuItem" th:text="${emenu.menuName}"
-                                                                           th:href="@{${emenu.url}}">三级菜单</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+
 
                 <!-- 自定义菜单 -->
                 <li>
