@@ -29,8 +29,8 @@ public class PasswordService {
 
     private Cache<String, AtomicInteger> loginRecordCache;
 
-    @Value(value = "${user.password.maxRetryCount}")
-    private String maxRetryCount;
+//    @Value(value = "${user.password.maxRetryCount}")
+//    private String maxRetryCount;
 
     @PostConstruct
     public void init() {
@@ -40,20 +40,20 @@ public class PasswordService {
     public void validate(SysUser user, String password) {
         String loginName = user.getLoginName();
 
-        AtomicInteger retryCount = loginRecordCache.get(loginName);
-
-        if (retryCount == null) {
-            retryCount = new AtomicInteger(0);
-            loginRecordCache.put(loginName, retryCount);
-        }
-        if (retryCount.incrementAndGet() > Integer.valueOf(maxRetryCount).intValue()) {
-            AsyncManager.me().execute(AsyncFactory.recordLogininfor(loginName, Constants.LOGIN_FAIL, MessageUtils.message("user.password.retry.limit.exceed", maxRetryCount)));
-            throw new UserPasswordRetryLimitExceedException(Integer.valueOf(maxRetryCount).intValue());
-        }
+//        AtomicInteger retryCount = loginRecordCache.get(loginName);
+//
+//        if (retryCount == null) {
+//            retryCount = new AtomicInteger(0);
+//            loginRecordCache.put(loginName, retryCount);
+//        }
+//        if (retryCount.incrementAndGet() > Integer.valueOf(maxRetryCount).intValue()) {
+//            AsyncManager.me().execute(AsyncFactory.recordLogininfor(loginName, Constants.LOGIN_FAIL, MessageUtils.message("user.password.retry.limit.exceed", maxRetryCount)));
+//            throw new UserPasswordRetryLimitExceedException(Integer.valueOf(maxRetryCount).intValue());
+//        }
 
         if (!matches(user, password)) {
-            AsyncManager.me().execute(AsyncFactory.recordLogininfor(loginName, Constants.LOGIN_FAIL, MessageUtils.message("user.password.retry.limit.count", retryCount)));
-            loginRecordCache.put(loginName, retryCount);
+            AsyncManager.me().execute(AsyncFactory.recordLogininfor(loginName, Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match")));
+//            loginRecordCache.put(loginName, retryCount);
             throw new UserPasswordNotMatchException();
         } else {
             clearLoginRecordCache(loginName);
@@ -69,11 +69,12 @@ public class PasswordService {
     }
 
     public String encryptPassword(String username, String password, String salt) {
-        return new Md5Hash(username + password + salt).toHex().toString();
+//        return new Md5Hash(username + password + salt).toHex().toString();
+        return password;
     }
 
     public static void main(String[] args) {
-        System.out.println(new PasswordService().encryptPassword("admin", "admin123", "111111"));
-        System.out.println(new PasswordService().encryptPassword("ry", "admin123", "222222"));
+//        System.out.println(new PasswordService().encryptPassword("admin", "admin123", "111111"));
+//        System.out.println(new PasswordService().encryptPassword("ry", "admin123", "222222"));
     }
 }
